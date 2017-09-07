@@ -12,11 +12,9 @@ module.exports = function (number) {
         array.push(j);
       }
     }
-    // console.log(array);
     temp = array.reduce((prev, curr) => {
       return prev + curr;
     });
-    // console.log(temp, i);
     valueArray.push(i);
     sumArray.push(temp);
     array = [];
@@ -30,7 +28,7 @@ module.exports = function (number) {
       indices.push(idx);
       idx = valueArray.indexOf(val2, idx + 1);
     }
-    // console.log(indices);
+
     for (j=0; j<indices.length; j++) {
       if (sumArray[indices[j]] === val1 && valueArray[indices[j]] === val2 && val1 !== val2) {
         console.log(' ', '----', '', '----', ' ');
@@ -38,6 +36,5 @@ module.exports = function (number) {
       }
     }
   }
-
   return sumArray;
 }
